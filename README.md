@@ -1,11 +1,8 @@
-# Fedora Wayland Setup
-This is a setup script for a fresh installation of Fedora on Wayland. This script automates the installation of software and the configuration of the operating system to my liking. 
+# Linux Setup Scripts
+This repo contains setup scripts for automating the installation of software and  configuringh the linux operating system to my liking. There are currently versions for redhat and debian based systems. 
 
 ## Software Installation
-```
-sudo dnf update
-```
-#### dnf
+#### dnf / apt packages
 - focuswriter
 - flatpak
 - deluge
@@ -18,7 +15,7 @@ sudo dnf update
 - vim-enhanced
 - php
 - sway
-#### flatpak
+#### flatpak packages
 - setup flathub repos
 ```bash
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
