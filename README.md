@@ -1,5 +1,10 @@
 # Linux Setup Scripts
-This repo contains setup scripts for automating the installation of software and  configuringh the linux operating system to my liking. There are currently versions for redhat and debian based systems. 
+This repo contains setup scripts and dotfiles for (mostly) automating the setup of a new linux environment. It includes some defaults I consider sane like zsh and a flat pointer curve. It installs the packages I use regularly and the environments I use to develop.
+
+## Config files
+- vimrc
+- zshrc
+- sway (for wayland tiling manager users)
 
 ## Software Installation
 #### dnf / apt packages
