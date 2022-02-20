@@ -4,7 +4,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 # install software packages from dnf
-sudo apt install -y focuswriter flatpak deluge chromium htop neofetch zsh nodejs gnome-tweaks vim-enhanced php
+sudo apt install -y focuswriter flatpak deluge htop neofetch zsh nodejs gnome-tweaks php
 
 # install software packages from flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
