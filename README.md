@@ -73,4 +73,4 @@ sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/
 ```
 7. Copy dotfiles into /home
 
-
+dd
