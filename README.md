@@ -1,4 +1,4 @@
-# DELETE ME!!!
+
 
 # Linux Setup Scripts
 This repo contains setup scripts and dotfiles to (mostly) automate the setup of a new linux environment. It includes some defaults I consider sane like zsh and a flat pointer curve. It installs the packages I use regularly and the environments I use to develop.
