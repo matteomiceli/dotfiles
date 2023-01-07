@@ -3,7 +3,7 @@
 sudo dnf update -y 
 
 # install software packages from dnf
-sudo dnf install -y focuswriter flatpak deluge chromium htop neofetch zsh nodejs gnome-tweaks vim-enhanced php sway
+sudo dnf install -y focuswriter flatpak deluge chromium htop neofetch zsh gnome-tweaks vim-enhanced
 
 # install software packages from flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -14,15 +14,8 @@ flatpak install -y postman flathub org.gnome.Extensions com.spotify.Client com.d
 # mouse acceleration -- flat
 gsettings  set  org.gnome.desktop.peripherals.mouse  accel-profile  flat
 
-# fractional scaling
-gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
-
 # zsh as default shell (requires restart)
 chsh -s $(which zsh)
-
-# set login screen to main monitor
-sudo cp ~/.config/monitors.xml ~gdm/.config/monitors.xml
-sudo chown gdm:gdm ~gdm/.config/monitors.xml
 
 # run and enable ssh server
 sudo systemctl start sshd
