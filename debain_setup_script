@@ -4,7 +4,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 # install software packages from dnf
-sudo apt install -y focuswriter flatpak deluge htop neofetch zsh nodejs gnome-tweaks php ssh
+sudo apt install -y focuswriter flatpak deluge htop neofetch zsh gnome-tweaks php ssh
 
 # install software packages from flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -34,3 +34,6 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # install zsh autosuggestion plugin
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# install node version manager 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
