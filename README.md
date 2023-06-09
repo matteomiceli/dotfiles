@@ -7,6 +7,7 @@ This repo contains setup scripts and dotfiles to (mostly) automate the setup of 
 - vimrc
 - zshrc
 - sway (for wayland tiling manager users)
+- nvim config
 
 ## Software Installation
 #### dnf / apt packages
