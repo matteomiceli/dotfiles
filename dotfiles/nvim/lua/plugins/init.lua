@@ -16,10 +16,12 @@ return require('packer').startup(function(use)
 
   -- code painting 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use { "catppuccin/nvim", as = "catppuccin" }
-
-  vim.cmd.colorscheme "catppuccin"
-
+  use { "catppuccin/nvim",
+    config = function ()
+      require('catppuccin').setup({})
+      vim.cmd('colorscheme catppuccin')
+    end
+  }
 
   -- LSP
   use {
