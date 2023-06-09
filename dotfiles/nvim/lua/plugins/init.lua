@@ -7,25 +7,21 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- utility
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use({
-	  'projekt0n/github-nvim-theme',
-	  config = function()
-		  require('github-theme').setup({
-			  -- ...
-		  })
-
-		  vim.cmd('colorscheme github_dark_dimmed')
-	  end
-  })
-
+  -- code painting 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use { "catppuccin/nvim", as = "catppuccin" }
 
+  vim.cmd.colorscheme "catppuccin"
+
+
+  -- LSP
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
