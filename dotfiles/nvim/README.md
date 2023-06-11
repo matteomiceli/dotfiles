@@ -14,15 +14,12 @@
 │   ├── keys
 │   ├── plugins
 │   └── set
-├── plugin
-│   └── packer_compiled.lua
 └── README.md
 ```
 
 - **init.lua:** Config entry point.
 - **after:** Contains custom config and initialization for plugins.
 - **lua:** Editor preferences, keymaps, and plugin setup.
-- **plugin:** Packer's compiled config. 
 
 
 ### Setup
@@ -34,4 +31,4 @@
       ~/.local/share/nvim/site/pack/packer/start/packer.nvim
       ```
 3. Open `init.lua` in nvim and run source the file with `:so`.
-4. Run `:PackerSync` to install plugins. 
+4. Run `:PackerSync` to install plugins.
