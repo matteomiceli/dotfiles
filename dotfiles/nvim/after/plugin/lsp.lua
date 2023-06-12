@@ -1,4 +1,8 @@
-local lsp = require('lsp-zero').preset({})
+local lsp = require('lsp-zero').preset({
+  manage_nvim_cmp = {
+    set_extra_mappings = true;
+  }
+})
 
 -- format on save with null-ls
 lsp.format_on_save({
@@ -7,7 +11,7 @@ lsp.format_on_save({
     timeout_ms = 10000,
   },
   servers = {
-    ['null-ls'] = {'javascript', 'typescript', 'lua'},
+    ['null-ls'] = { "css", "scss", "less", "json", "jsonc","javascript", "typescript", "typescriptreact", "javascriptreact" },
   }
 })
 
@@ -19,9 +23,8 @@ null_ls.setup({
     null_opts.on_attach(client, bufnr)
   end,
   sources = {
-    --- Replace these with the tools you have installed
-    null_ls.builtins.formatting.prettier,
-    null_ls.builtins.formatting.eslint,
+    null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.code_actions.eslint,
   }
 })
 
@@ -36,4 +39,3 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
-
