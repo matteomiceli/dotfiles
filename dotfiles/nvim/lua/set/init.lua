@@ -21,3 +21,5 @@ vim.opt.hlsearch = false
 -- themeing
 vim.opt.termguicolors = true 
 
+-- clipboard
+vim.opt.clipboard = 'unnamedplus'
