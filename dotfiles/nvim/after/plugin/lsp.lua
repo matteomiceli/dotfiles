@@ -11,7 +11,7 @@ lsp.format_on_save({
     timeout_ms = 10000,
   },
   servers = {
-    ['null-ls'] = { "css", "scss", "less", "json", "jsonc","javascript", "typescript", "typescriptreact", "javascriptreact" },
+    ['null-ls'] = { "css", "html", "scss", "go", "less", "json", "jsonc", "javascript", "typescript", "typescriptreact", "javascriptreact" },
   }
 })
 
@@ -24,13 +24,14 @@ null_ls.setup({
   end,
   sources = {
     null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.formatting.gofmt,
     null_ls.builtins.code_actions.eslint,
   }
 })
 
 -- Mason defaults 
 require('mason-lspconfig').setup({
-  ensure_installed = { "lua_ls", "tsserver", "emmet_ls", "html", "cssls" }
+  ensure_installed = { "lua_ls", "tsserver", "emmet_ls", "html", "cssls", "gopls", "eslint" }
 })
 
 -- lsp defaults
