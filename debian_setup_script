@@ -4,7 +4,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 # install software packages from apt
-sudo apt install -y git curl focuswriter flatpak deluge htop neofetch zsh gnome-tweaks neovim
+sudo apt install -y git curl focuswriter flatpak deluge htop neofetch zsh gnome-tweaks neovim lua5.4
 
 # install software packages from flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
