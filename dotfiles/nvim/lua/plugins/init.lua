@@ -50,4 +50,11 @@ return require('packer').startup(function(use)
     requires = { "nvim-lua/plenary.nvim" },
   })
 
+
+   -- Status line
+   use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
 end)
