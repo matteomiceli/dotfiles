@@ -39,4 +39,12 @@ lsp.on_attach(function(client, bufnr)
 	lsp.default_keymaps({buffer = bufnr})
 end)
 
+-- use <CR> for autocomplete as well as <C-y>
+local cmp = require('cmp')
+cmp.setup({
+  mapping = cmp.mapping.preset.insert({
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+  })
+})
+
 lsp.setup()
