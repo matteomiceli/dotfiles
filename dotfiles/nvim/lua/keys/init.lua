@@ -1,3 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>oo", vim.cmd.Vex)
 
+-- Open file explorer in split right view
+vim.keymap.set("n", "<leader>oo", ':Vex! <Enter>')
