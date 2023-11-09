@@ -1,5 +1,8 @@
 font:
   size: 16
+  # Line height
+  offset:
+    y: 8
   normal:
     family: Monaco Nerd Font Mono
     style: Regular
@@ -14,4 +17,5 @@ font:
     style: Bold Italic
 
 env:
+  # Fix color in tmux
   TERM: xterm-256color
