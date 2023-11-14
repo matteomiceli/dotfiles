@@ -2,7 +2,7 @@ font:
   size: 16
   # Line height
   offset:
-    y: 8
+    y: 5
   normal:
     family: Monaco Nerd Font Mono
     style: Regular
