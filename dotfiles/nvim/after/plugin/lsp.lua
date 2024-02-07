@@ -13,6 +13,7 @@ lsp_zero.format_on_save({
   servers = {
     ["gopls"] = { "go" },
     ["tsserver"] = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
+    ["svelte"] = { "svelte" },
   }
 })
 
