@@ -1,50 +1,48 @@
-local lsp = require('lsp-zero').preset({
-  manage_nvim_cmp = {
-    set_extra_mappings = true;
-  }
-})
+local lsp_zero = require('lsp-zero')
 
--- format on save with null-ls
-lsp.format_on_save({
+-- lsp defaults
+lsp_zero.on_attach(function(client, bufnr)
+  lsp_zero.default_keymaps({ buffer = bufnr })
+end)
+
+lsp_zero.format_on_save({
   format_opts = {
     async = false,
     timeout_ms = 10000,
   },
   servers = {
-    ['null-ls'] = { "css", "html", "scss", "go", "less", "json", "jsonc", "javascript", "typescript", "typescriptreact", "javascriptreact" },
+    ["gopls"] = { "go" },
+    ["tsserver"] = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
   }
 })
 
-local null_ls = require('null-ls')
-local null_opts = lsp.build_options('null-ls', {})
+require('mason').setup()
 
-null_ls.setup({
-  on_attach = function(client, bufnr)
-    null_opts.on_attach(client, bufnr)
-  end,
-  sources = {
-    null_ls.builtins.formatting.prettierd,
-    null_ls.builtins.formatting.gofmt,
-    null_ls.builtins.code_actions.eslint,
-  }
-})
-
--- Mason defaults 
+-- Mason defaults
 require('mason-lspconfig').setup({
-  ensure_installed = { "lua_ls", "tsserver", "emmet_ls", "html", "cssls", "gopls", "eslint" }
+  ensure_installed = { "lua_ls", "tsserver", "emmet_ls", "html", "cssls", "gopls", "eslint" },
+  handlers = {
+    lsp_zero.default_setup,
+  },
 })
 
--- lsp defaults
-lsp.on_attach(function(client, bufnr)
-	lsp.default_keymaps({buffer = bufnr})
-end)
 
 -- use <CR> for autocomplete as well as <C-y>
 local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
 cmp.setup({
+  -- completion popup borders
   mapping = cmp.mapping.preset.insert({
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
-  })
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
+    ['<Tab>'] = cmp_action.luasnip_supertab(),
+    ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+  }),
+  -- completion popup borders
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  }
 })
 
-lsp.setup()
+lsp_zero.setup()
