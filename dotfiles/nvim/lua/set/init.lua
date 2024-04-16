@@ -15,8 +15,10 @@ vim.opt.updatetime = 750
 vim.opt.wrap = false
 vim.opt.smartindent = false
 
--- remove persistent highlight on search
-vim.opt.hlsearch = false
+-- search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = false -- remove persistent highlight on search
 
 -- themeing
 vim.opt.termguicolors = true
