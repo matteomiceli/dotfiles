@@ -26,5 +26,8 @@ vim.opt.termguicolors = true
 -- clipboard
 vim.opt.clipboard = 'unnamedplus'
 
+-- increased update time for faster feedback
+vim.opt.updatetime = 400
+
 -- netrw
 vim.g.netrw_banner = 0

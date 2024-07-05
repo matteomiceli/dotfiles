@@ -26,4 +26,6 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
+  -- git gutter indicators
+  {'mhinz/vim-signify'}
 }
