@@ -2,10 +2,10 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/matteo/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
-#Path to go
-export GOPATH=/Users/matteo/go
+#Path to go 
+export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
@@ -74,7 +74,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+if [[ $(uname) == "Darwin" ]]; then
+  plugins=(git)
+else 
+  plugins=(git zsh-autosuggestions)
+fi 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,8 +109,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #PROMT="%n@%m%# "
-local hostname="%{$fg_bold[black]%}%m"
+local hostname="%{$fg_bold[white]%}%m"
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 PROMPT='${hostname} ${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ $(uname) == "Darwin" ]]; then
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
