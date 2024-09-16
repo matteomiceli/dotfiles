@@ -31,3 +31,6 @@ vim.opt.updatetime = 400
 
 -- netrw
 vim.g.netrw_banner = 0
+
+-- color column at 80
+vim.opt.colorcolumn = "80"
