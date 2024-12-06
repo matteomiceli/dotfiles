@@ -12,7 +12,7 @@ lsp_zero.format_on_save({
   },
   servers = {
     ["gopls"] = { "go" },
-    ["tsserver"] = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
+    ["ts_ls"] = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
     ["svelte"] = { "svelte" },
   }
 })
@@ -21,7 +21,7 @@ require('mason').setup()
 
 -- Mason defaults
 require('mason-lspconfig').setup({
-  ensure_installed = { "lua_ls", "tsserver", "emmet_ls", "html", "cssls", "gopls", "eslint" },
+  ensure_installed = { "lua_ls", "ts_ls", "emmet_ls", "html", "cssls", "gopls", "eslint" },
   handlers = {
     lsp_zero.default_setup,
   },
