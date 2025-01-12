@@ -27,5 +27,5 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
   -- git gutter indicators
-  {'mhinz/vim-signify'}
+  {'airblade/vim-gitgutter'}
 }
