@@ -20,8 +20,14 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = false -- remove persistent highlight on search
 
+-- diagnostics
+ vim.diagnostic.config({ virtual_text = true })
+
 -- themeing
 vim.opt.termguicolors = true
+
+-- borders
+vim.opt.winborder = "rounded"
 
 -- clipboard
 vim.opt.clipboard = 'unnamedplus'
