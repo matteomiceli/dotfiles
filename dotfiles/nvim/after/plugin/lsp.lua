@@ -39,6 +39,10 @@ cmp.setup({
     ['<Tab>'] = cmp_action.luasnip_supertab(),
     ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
   }),
+  window = {
+    completion = cmp.config.window.bordered({ border = 'rounded' }),
+    documentation = cmp.config.window.bordered({ border = 'rounded' }),
+  }
 })
 
 lsp_zero.setup()
