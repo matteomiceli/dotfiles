@@ -10,6 +10,7 @@ vim.opt.expandtab = true
 vim.opt.scrolloff = 4
 
 vim.opt.updatetime = 750
+vim.opt.cmdheight = 0
 
 -- text formatting
 vim.opt.wrap = false
