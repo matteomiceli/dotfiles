@@ -4,6 +4,8 @@ vim.api.nvim_create_user_command(
     -- Editor formatting
     vim.opt.wrap = true
     vim.opt.linebreak = true
+    vim.opt.colorcolumn = ""
+
 
     -- Spell check
     -- use `z=` to see suggetions, ]s [s to cycle through suggestions
