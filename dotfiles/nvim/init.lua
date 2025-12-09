@@ -19,3 +19,4 @@ require("lazy").setup("plugins")
 -- order matters, all other config should be imported after plugins
 require("keys")
 require("set")
+require("commands")
