@@ -33,4 +33,7 @@ return {
 
   -- git gutter indicators
   {'airblade/vim-gitgutter'}
+
+  -- copilot
+  -- {'zbirenbaum/copilot.lua'}
 }

@@ -1,0 +1,10 @@
+-- copilot setup
+-- require("copilot").setup({
+--   suggestion = {
+--     keymap = {
+--       accept = "<C-a>",
+--       next = "<C-j>",
+--       previous = "<C-J>",
+--     },
+--   },
+-- })
