@@ -27,9 +27,6 @@ vim.opt.hlsearch = false -- remove persistent highlight on search
 -- themeing
 vim.opt.termguicolors = true
 
--- borders
-vim.opt.winborder = "rounded"
-
 -- clipboard
 vim.opt.clipboard = 'unnamedplus'
 
