@@ -1,43 +1,37 @@
-local lsp_zero = require('lsp-zero')
-
--- lsp defaults
-lsp_zero.on_attach(function(client, bufnr)
-  lsp_zero.default_keymaps({ buffer = bufnr })
-end)
-
-lsp_zero.format_on_save({
-  format_opts = {
-    async = false,
-    timeout_ms = 10000,
-  },
-  servers = {
-    ["gopls"] = { "go" },
-    ["ts_ls"] = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
-    ["svelte"] = { "svelte" },
-  }
-})
-
 -- Mason defaults
 require('mason').setup()
 require('mason-lspconfig').setup({
-  ensure_installed = { "lua_ls", "ts_ls", "emmet_ls", "html", "cssls", "gopls", "eslint" },
-  handlers = {
-    lsp_zero.default_setup,
-  },
+  ensure_installed = {
+    "lua_ls",
+    "gopls",
+    "ts_ls",
+    "pyright",
+    "svelte",
+    "html",
+    "cssls",
+    "emmet_ls",
+    "eslint"
+  }
 })
 
 
--- use <CR> for autocomplete as well as <C-y>
-local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
+-- Nvim default keymaps
+--   grn - rename
+--   grr - goto references
+--   gra - get codeactions
+--   grt - goto type definition
 
-cmp.setup({
-  -- completion popup borders
-  mapping = cmp.mapping.preset.insert({
-    ['<CR>'] = cmp.mapping.confirm({ select = false }),
-    ['<Tab>'] = cmp_action.luasnip_supertab(),
-    ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
-  }),
+-- Run the following when LSP attaches to buffer
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
+  callback = function(event)
+    -- Ensure the keymaps are buffer-local
+    local bufopts = { buffer = event.buf }
+
+    -- Code formatting
+    vim.keymap.set('n', '<leader>fm', function()
+      vim.lsp.buf.format { async = true }
+    end, bufopts)
+
+  end
 })
-
-lsp_zero.setup()

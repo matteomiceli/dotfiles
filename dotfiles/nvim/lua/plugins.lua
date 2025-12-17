@@ -14,16 +14,16 @@ return {
   },
 
   -- code painting
-  { "nvim-treesitter/nvim-treesitter",  build = ":TSUpdate" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    lazy = false,
+    build = ":TSUpdate"
+  },
 
   -- lsp support
-  { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
   { 'williamboman/mason.nvim' },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'neovim/nvim-lspconfig' },
-  { 'hrsh7th/cmp-nvim-lsp' },
-  { 'hrsh7th/nvim-cmp' },
-  { 'L3MON4D3/LuaSnip' },
 
   -- status linedefined
   {
