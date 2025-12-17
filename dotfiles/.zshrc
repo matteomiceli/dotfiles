@@ -8,6 +8,12 @@ export ZSH=$HOME/.oh-my-zsh
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
+# Path to ripgrep config
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
+# set editor variable
+export EDITOR=nvim
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
