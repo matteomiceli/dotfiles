@@ -30,8 +30,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Code formatting
     vim.keymap.set('n', '<leader>fm', function()
-      vim.lsp.buf.format { async = true }
+      vim.lsp.buf.format { async = false }
     end, bufopts)
-
   end
 })
+
+-- completion config in mini.lua

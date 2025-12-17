@@ -11,6 +11,7 @@ vim.opt.scrolloff = 4
 
 vim.opt.updatetime = 750
 vim.opt.cmdheight = 0
+vim.opt.signcolumn = "yes"
 
 -- text formatting
 vim.opt.wrap = false

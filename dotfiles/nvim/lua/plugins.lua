@@ -6,6 +6,12 @@ return {
     priority = 1000,
   },
 
+  -- mini.nvim
+  {
+    'nvim-mini/mini.nvim',
+    version = '*'
+  },
+
   -- search utility
   {
     'nvim-telescope/telescope.nvim',
@@ -32,7 +38,7 @@ return {
   },
 
   -- git gutter indicators
-  {'airblade/vim-gitgutter'}
+  { 'airblade/vim-gitgutter' }
 
   -- copilot
   -- {'zbirenbaum/copilot.lua'}
