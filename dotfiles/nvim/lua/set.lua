@@ -39,3 +39,6 @@ vim.g.netrw_banner = 0
 
 -- color column at 80
 vim.opt.colorcolumn = "80"
+
+-- completion options (effects mini.nvim)
+vim.opt.completeopt = "menu,noinsert,fuzzy"

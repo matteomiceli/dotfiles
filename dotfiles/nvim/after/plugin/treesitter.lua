@@ -28,11 +28,13 @@ treesitter.install({
   "query"
 })
 
--- Configure Highlighting
+-- Start treesitter when file loaded
 vim.api.nvim_create_autocmd("FileType", {
   callback = function(args)
     local bufnr = args.buf
     -- Start Treesitter for the buffer if a parser is available
     pcall(vim.treesitter.start, bufnr)
+    -- Use treesitter for indentation
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
   end,
 })

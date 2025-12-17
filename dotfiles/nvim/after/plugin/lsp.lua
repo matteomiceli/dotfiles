@@ -28,6 +28,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- Ensure the keymaps are buffer-local
     local bufopts = { buffer = event.buf }
 
+    -- Goto def
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
     -- Code formatting
     vim.keymap.set('n', '<leader>fm', function()
       vim.lsp.buf.format { async = false }

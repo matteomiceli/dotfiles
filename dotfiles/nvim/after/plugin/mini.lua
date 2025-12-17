@@ -23,6 +23,7 @@ require("mini.pick").setup({
     scroll_up      = '<C-k>',
   },
 })
-require("mini.surround").setup()
+require("mini.icons").setup()
+require("mini.snippets").setup()
 -- use 'gS' to automatically split args
 require("mini.splitjoin").setup()
