@@ -17,9 +17,8 @@ lsp_zero.format_on_save({
   }
 })
 
-require('mason').setup()
-
 -- Mason defaults
+require('mason').setup()
 require('mason-lspconfig').setup({
   ensure_installed = { "lua_ls", "ts_ls", "emmet_ls", "html", "cssls", "gopls", "eslint" },
   handlers = {
