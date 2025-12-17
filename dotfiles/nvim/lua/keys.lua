@@ -11,3 +11,8 @@ vim.keymap.set("t", "<ESC>", '<C-\\><C-n>')
 
 -- Diagnostics
 vim.keymap.set("n", "gl", function() vim.diagnostic.open_float() end)  -- diagnostics
+
+-- Picker
+vim.keymap.set('n', '<leader>ff', "<cmd>Pick files<cr>")
+vim.keymap.set('n', '<leader>fg',  "<cmd>Pick files tool='git'<cr>")
+vim.keymap.set('n', '<leader>fs',  "<cmd>Pick grep_live pattern='<cword>'<cr>")

@@ -10,8 +10,9 @@
 │   └── plugin
 │       ├── lsp.lua
 │       ├── lualine.lua
-│       ├── telescope.lua
+│       ├── mini.lua
 │       ├── theme.lua
+│       ├── copilot.lua
 │       └── treesitter.lua
 └── lua
     ├── keys

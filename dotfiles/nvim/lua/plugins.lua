@@ -12,13 +12,6 @@ return {
     version = '*'
   },
 
-  -- search utility
-  {
-    'nvim-telescope/telescope.nvim',
-    branch = '0.1.x',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
-
   -- code painting
   {
     "nvim-treesitter/nvim-treesitter",
