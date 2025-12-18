@@ -30,9 +30,6 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
 
-  -- git gutter indicators
-  { 'airblade/vim-gitgutter' }
-
   -- copilot
   -- {'zbirenbaum/copilot.lua'}
 }
