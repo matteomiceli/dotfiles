@@ -2,7 +2,6 @@
 
 -- completion
 require("mini.completion").setup()
-
 -- Remap comp popup next and previous
 -- https://nvim-mini.org/mini.nvim/doc/mini-completion.html
 local imap_expr = function(lhs, rhs)
@@ -24,6 +23,12 @@ require("mini.pick").setup({
   },
 })
 require("mini.diff").setup()
+require("mini.files").setup({
+  mappings = {
+    go_in_plus  = '<Enter>',
+    go_out_plus  = '-',
+  }
+})
 require("mini.icons").setup()
 require("mini.snippets").setup()
 -- use 'gS' to automatically split args
