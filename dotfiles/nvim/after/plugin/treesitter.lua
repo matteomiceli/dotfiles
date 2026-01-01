@@ -18,6 +18,7 @@ treesitter.install({
   "json",
   "css",
   "javascript",
+  "svelte",
   "tsx",
   "typescript",
   "go",
