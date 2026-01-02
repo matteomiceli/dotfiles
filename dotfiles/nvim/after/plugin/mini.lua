@@ -19,6 +19,5 @@ require("mini.files").setup({
   }
 })
 require("mini.icons").setup()
-require("mini.snippets").setup()
 -- use 'gS' to automatically split args
 require("mini.splitjoin").setup()

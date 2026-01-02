@@ -7,7 +7,8 @@ require('blink.cmp').setup(
     },
 
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      -- the 'snippets' source introduces a race condition causing dropped keys
+      default = {'lsp', 'path', 'buffer'},
     },
 
     keymap = {

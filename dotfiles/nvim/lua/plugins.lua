@@ -16,7 +16,8 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
-    build = ":TSUpdate"
+    build = ":TSUpdate",
+    branch = "main"
   },
 
   -- lsp support
@@ -32,7 +33,6 @@ return {
   -- completion
   {
     'saghen/blink.cmp',
-    dependencies = { 'rafamadriz/friendly-snippets' },
     version = '1.*',
   },
 
