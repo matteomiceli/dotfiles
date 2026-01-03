@@ -5,6 +5,9 @@ vim.api.nvim_create_user_command(
     vim.opt.wrap = true
     vim.opt.linebreak = true
     vim.opt.colorcolumn = ""
+    -- remove completion
+    vim.b.completion = false
+
 
 
     -- Spell check
