@@ -13,6 +13,12 @@ require('mason-lspconfig').setup({
   }
 })
 
+-- GDScript LSP config
+-- launch nvim with `nvim --listen /tmp/godot.pipe`
+-- and add these exec flags to external editor in godot
+-- `--server /tmp/godot.pipe --remote-send "<esc>:n {file}<CR>:call cursor({line},{col})<CR>"`
+vim.lsp.enable('gdscript')
+
 -- Nvim default keymaps
 --   grn - rename
 --   grr - goto references
