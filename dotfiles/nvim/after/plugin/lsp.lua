@@ -13,7 +13,6 @@ require('mason-lspconfig').setup({
   }
 })
 
-
 -- Nvim default keymaps
 --   grn - rename
 --   grr - goto references
@@ -29,11 +28,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Goto def
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
-    -- Code formatting
-    vim.keymap.set('n', '<leader>fm', function()
-      vim.lsp.buf.format { async = false }
-    end, bufopts)
   end
 })
-
--- completion config in mini.lua

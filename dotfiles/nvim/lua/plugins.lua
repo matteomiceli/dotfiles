@@ -36,7 +36,12 @@ return {
     version = '1.*',
   },
 
-  -- status linedefined
+  -- formatting
+  {
+    'stevearc/conform.nvim',
+  },
+
+  -- status line
   {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' }

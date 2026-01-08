@@ -24,3 +24,8 @@ local toggle_files = function()
 end
 
 vim.keymap.set("n", "<leader>e", toggle_files)
+
+-- formatting
+vim.keymap.set("n", "<leader>fm", function()
+  require("conform").format()
+end)
