@@ -18,3 +18,5 @@ TERM = "xterm-256color"
 
 [window]
   startup_mode = "maximized"
+  option_as_alt = "Both"
+
