@@ -9,21 +9,15 @@ vim.keymap.set("t", "<ESC>", '<C-\\><C-n>')
 vim.keymap.set("n", "gl", function() vim.diagnostic.open_float() end) -- diagnostics
 
 -- Picker
-vim.keymap.set('n', '<leader>ff', "<cmd>Pick files<cr>")
-vim.keymap.set('n', '<leader>fg', "<cmd>Pick files tool='git'<cr>")
-vim.keymap.set('n', '<leader>fs', "<cmd>Pick grep_live pattern='<cword>'<cr>")
+vim.keymap.set('n', '<leader>ff', function() Snacks.picker.files() end)
+vim.keymap.set('n', '<leader>fg', function() Snacks.picker.git_files() end)
+vim.keymap.set('n', '<leader>fs', function() Snacks.picker.grep() end)
+vim.keymap.set('n', '<leader>gl', function() Snacks.picker.diagnostics() end)
+  -- <M-i> show ignored files
+  -- <M-h> show hidden files
 
--- File explorer bindings
-local toggle_files = function()
-  if not MiniFiles.close() then
-    MiniFiles.open(
-    -- open mini files at current buffer
-      vim.api.nvim_buf_get_name(0)
-    )
-  end
-end
-
-vim.keymap.set("n", "<leader>e", toggle_files)
+-- Explorer
+vim.keymap.set("n", "<leader>e", function() Snacks.picker.explorer() end)
 
 -- formatting
 vim.keymap.set("n", "<leader>fm", function()

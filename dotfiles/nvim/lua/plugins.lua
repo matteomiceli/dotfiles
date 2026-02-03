@@ -12,6 +12,13 @@ return {
     version = '*'
   },
 
+  -- snacks.nvim
+  {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+  },
+
   -- code painting
   {
     "nvim-treesitter/nvim-treesitter",
