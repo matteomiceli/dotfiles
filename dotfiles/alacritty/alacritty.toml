@@ -6,7 +6,8 @@ import = [
 [font]
   size = 16
   # Line height
-  offset = { y = 5 }
+  offset = { y = 6 }
+  glyph_offset = { y = 3 }
   normal = { family = "Monaco Nerd Font Mono", style = "Regular" }
   bold = { family = "Monaco Nerd Font Mono", style = "Bold" }
   italic = { family = "Monaco Nerd Font Mono", style = "Regular Italic" }
