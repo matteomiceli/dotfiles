@@ -1,5 +1,6 @@
+-- Enter prose mode
 vim.api.nvim_create_user_command(
-  'WriteMode',
+  'ProseMode',
   function()
     -- Editor formatting
     vim.opt.wrap = true
@@ -15,7 +16,27 @@ vim.api.nvim_create_user_command(
     vim.opt.spell = true
     vim.opt.spelllang = 'en_us'
   end,
-  { desc = 'Enter write mode' }
+  { desc = 'Enter prose mode' }
+)
+
+vim.api.nvim_create_user_command(
+  'CodeMode',
+  function()
+    -- Editor formatting
+    vim.opt.wrap = false
+    vim.opt.linebreak = false
+    vim.opt.colorcolumn = "80"
+    -- remove completion
+    vim.b.completion = true
+
+
+
+    -- Spell check
+    -- use `z=` to see suggetions, ]s [s to cycle through suggestions
+    vim.opt.spell = false
+    vim.opt.spelllang = 'en_us'
+  end,
+  { desc = 'Enter code mode' }
 )
 
 -- Show macro recording when default `cmdheight = 0`
