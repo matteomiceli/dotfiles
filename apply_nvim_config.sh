@@ -4,6 +4,10 @@
 
 config_dir="$HOME/.config"
 
+if [ -d "$config_dir/nvim_backup" ]; then
+  rm -r "$config_dir/nvim_backup"
+fi
+
 # backup existing config
 mv "$config_dir/nvim" "$config_dir/nvim_backup"
 
