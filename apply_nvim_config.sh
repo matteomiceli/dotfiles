@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Copy the repo nvim config to the system
+
 config_dir="$HOME/.config"
 
 # backup existing config
