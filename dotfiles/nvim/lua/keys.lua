@@ -9,12 +9,17 @@ vim.keymap.set("t", "<ESC>", '<C-\\><C-n>')
 vim.keymap.set("n", "gl", function() vim.diagnostic.open_float() end) -- diagnostics
 
 -- Picker
+--  <M-i> show ignored files
+--  <M-h> show hidden files
 vim.keymap.set('n', '<leader>ff', function() Snacks.picker.files() end)
 vim.keymap.set('n', '<leader>fg', function() Snacks.picker.git_files() end)
 vim.keymap.set('n', '<leader>fs', function() Snacks.picker.grep() end)
 vim.keymap.set('n', '<leader>gl', function() Snacks.picker.diagnostics() end)
-  -- <M-i> show ignored files
-  -- <M-h> show hidden files
+vim.keymap.set('n', '<leader>fr', function() Snacks.picker.recent() end)
+vim.keymap.set('n', '<leader>fR', function() Snacks.picker.resume() end)
+-- the searches the selection
+vim.keymap.set('n', '<leader>sw', function() Snacks.picker.grep_word() end)
+
 
 -- Explorer
 vim.keymap.set("n", "<leader>e", function() Snacks.picker.explorer() end)
