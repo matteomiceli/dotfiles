@@ -8,6 +8,9 @@ require("snacks").setup({
         keys = {
           ["<S-Tab>"] = { "list_up", mode = { "i", "n" } },
           ["<Tab>"] = { "list_down", mode = { "i", "n" } },
+          ["<C-p>"] = { "history_back", mode = { "i", "n" } },
+          ["<C-n>"] = { "history_forward", mode = { "i", "n" } },
+
         }
       }
     }
