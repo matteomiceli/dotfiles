@@ -1,6 +1,6 @@
 -- copilot setup
 -- require("copilot").setup({
---   copilot_model = "claude-sonnet-4.5",
+--   copilot_model = "claude-sonnet-5.5",
 --   suggestion = {
 --     keymap = {
 --       accept = "<C-a>",
